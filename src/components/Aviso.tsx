@@ -52,8 +52,6 @@ const Aviso: React.FC<AvisoProps> = ({
   showCloseButton = true,
   autoClose = true
 }) => {
-  if (!isOpen) return null;
-
   // Auto cerrar si está habilitado
   React.useEffect(() => {
     if (autoClose && isOpen) {
@@ -61,6 +59,8 @@ const Aviso: React.FC<AvisoProps> = ({
       return () => clearTimeout(timer);
     }
   }, [isOpen, autoClose, duration, onClose]);
+
+  if (!isOpen) return null;
 
   // Iconos por tipo
   const getIcon = () => {

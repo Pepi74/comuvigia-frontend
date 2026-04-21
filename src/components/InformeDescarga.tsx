@@ -19,8 +19,8 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 // Función para convertir mes y año a fechas inicio y fin en formato API
 const convertirFechaAPI = (anio: string, mes: string) => {
-  const anioNum = parseInt(anio);
-  const mesNum = parseInt(mes);
+  const anioNum = Number.parseInt(anio);
+  const mesNum = Number.parseInt(mes);
 
   // Fecha inicio: primer día del mes
   const fechaInicio = `${anio}-${mes.padStart(2, "0")}-01 00:00:00.000000`;

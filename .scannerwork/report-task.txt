@@ -1,0 +1,6 @@
+projectKey=comuvigia-frontend
+serverUrl=http://localhost:9010
+serverVersion=26.4.0.121862
+dashboardUrl=http://localhost:9010/dashboard?id=comuvigia-frontend
+ceTaskId=ac986d16-6ad7-4790-a977-736191dff7be
+ceTaskUrl=http://localhost:9010/api/ce/task?id=ac986d16-6ad7-4790-a977-736191dff7be
