@@ -37,3 +37,5 @@ yarn-error.log*
 public/robbery
 
 .scannerwork
+__pycache__
+screenshots
