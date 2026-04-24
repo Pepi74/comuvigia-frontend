@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 BASE_URL = os.environ.get("BASE_URL", "").strip()
-TEST_USER = os.environ.get("TEST_USER", "").strip()
+TEST_USER_ADMIN = os.environ.get("TEST_USER_ADMIN", "").strip()
 TEST_PASSWORD = os.environ.get("TEST_PASSWORD", "").strip()
 SCREENSHOTS_DIR = "tests/e2e/screenshots"
 
@@ -36,7 +36,7 @@ def test_login_valido(driver):
     campo_usuario = wait.until(EC.presence_of_element_located(
         (By.CSS_SELECTOR, "input[type='text'].native-input")
     ))
-    campo_usuario.send_keys(TEST_USER)
+    campo_usuario.send_keys(TEST_USER_ADMIN)
 
     campo_contrasena = driver.find_element(
         By.CSS_SELECTOR, "input[type='password'].native-input"
@@ -57,7 +57,7 @@ def test_login_invalido(driver):
     campo_usuario = wait.until(EC.presence_of_element_located(
         (By.CSS_SELECTOR, "input[type='text'].native-input")
     ))
-    campo_usuario.send_keys(TEST_USER)
+    campo_usuario.send_keys(TEST_USER_ADMIN)
 
     campo_contrasena = driver.find_element(
         By.CSS_SELECTOR, "input[type='password'].native-input"
