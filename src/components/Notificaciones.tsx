@@ -106,7 +106,7 @@ export function NotificacionesPopover({
 
 
   const calcularRiesgo = (alerta: Alert) => {
-    let valores = Array(reglas.length).fill(0); // Un cero para cada regla
+    let valores = new Array(reglas.length).fill(0); // Un cero para cada regla
 
     for (let i = 0; i < reglas.length; i++) {
       if (reglas[i].tipoAlerta.some(tipo => Number(tipo) === alerta.tipo)) {
@@ -248,7 +248,7 @@ export function NotificacionesPopover({
               <IonIcon 
                 icon={alert.tipo === 4 ? videocamOff : alertCircle} 
                 slot="start"
-                color={alert.tipo === 4 ? 'warning' : 'warning'}
+                color="warning"
                 style={{marginRight: '8px'}}
               />
               <IonLabel onClick={() => onVerDescripcion(alert)} style={{ cursor: 'pointer' }}>

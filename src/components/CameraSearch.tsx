@@ -20,7 +20,7 @@ const CameraSearch: React.FC<CameraSearchProps> = ({ cameras, searchText, onSear
     return text
       .toLowerCase()
       .normalize("NFD") // Separa (ej: "á" -> "a" + "´")
-      .replace(/[\u0300-\u036f]/g, ""); // Elimina los diacríticos
+      .replaceAll(/[\u0300-\u036f]/g, ""); // Elimina los diacríticos
   };
 
   const handleSearch = (text: string) => {

@@ -182,7 +182,7 @@ const Cameras: React.FC<CamerasProps> = ({
   const handlePositionChange = (index: number, value: string) => {
     if (editedCamera) {
       const newPosition = [...editedCamera.posicion] as [number, number];
-      newPosition[index] = parseFloat(value) || 0;
+      newPosition[index] = Number.parseFloat(value) || 0;
       setEditedCamera({
         ...editedCamera,
         posicion: newPosition
