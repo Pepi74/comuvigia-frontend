@@ -309,14 +309,15 @@ export default function Historial() {
               <p className="error-message">{error}</p>
             ) : (
               filteredCameras.map(cam => (
-                <div
+                <button
                   key={cam.id}
                   className={`camera-item ${selectedCamera?.id === cam.id ? 'selected' : ''}`}
                   onClick={() => setSelectedCamera(cam)}
+                  style={{ border: 'none', width: '100%', textAlign: 'left', display: 'block', padding: '22px' }}
                 >
                   <strong>{cam.nombre}</strong>
                   <p>{cam.direccion}</p>
-                </div>
+                </button>
               ))
             )}
           </div>
@@ -330,10 +331,11 @@ export default function Historial() {
                 <div key={estado} className="alert-section">
                   <h3>{estadoText} ({filtered.length})</h3>
                   {filtered.map(alert => (
-                    <div
+                    <button
                       key={alert.id}
                       className={`alert-card estado-${alert.estado}`}
                       onClick={() => { setSelectedAlert(alert); setMostrarDescripcion(true); }}
+                      style={{ border: 'none', width: '100%', textAlign: 'left', display: 'block', padding: '22px' }}
                     >
                       <div className="alert-header">
                         <span className="alert-title">Alerta {alert.id}</span>
@@ -348,7 +350,7 @@ export default function Historial() {
                           <IonIcon icon={getStateIcon(alert.estado)} /> <span>{formatEstado(alert.estado)}</span>
                         </div>
                       </div>
-                    </div>
+                    </button>
                   ))}
                 </div>
               )

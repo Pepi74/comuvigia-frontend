@@ -92,7 +92,17 @@ export function Navbar({ unseenCount, onShowNotifications, onShowMantenedores, o
           </IonButtons>
           
           <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flex: 1, gap: '16px' }}>
-              <img onClick={() => history.push('/home')} src="/comuvigia.png" className="logo-comuvigia" alt="Logo" style={{ height: '50px', paddingLeft: '10px', cursor: 'pointer'}} />
+              <button 
+                onClick={() => history.push('/home')}
+                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+              >
+                <img 
+                  src="/comuvigia.png" 
+                  className="logo-comuvigia" 
+                  alt="Ir al inicio" 
+                  style={{ height: '50px', paddingLeft: '10px' }} 
+                />
+              </button>
             <div ref={searchContainerRef}
             style={{ 
               flex: 1, 

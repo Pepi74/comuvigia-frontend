@@ -88,8 +88,9 @@ export const LayerControl: React.FC<LayerControlProps> = ({
           <strong>Mapa de calor</strong>
 
           <div className="layer-control-option" style={{ flexDirection: "column", alignItems: "flex-start" }}>
-            <label>Desde:</label>
+            <label htmlFor="fecha-desde">Desde:</label>
             <input
+              id="fecha-desde"
               type="date"
               value={fechaInicio}
               onChange={(e) => setFechaInicio(e.target.value)}
@@ -98,8 +99,9 @@ export const LayerControl: React.FC<LayerControlProps> = ({
           </div>
 
           <div className="layer-control-option" style={{ flexDirection: "column", alignItems: "flex-start" }}>
-            <label>Hasta:</label>
+            <label htmlFor="fecha-hasta">Hasta:</label>
             <input
+              id="fecha-hasta"
               type="date"
               value={fechaFin}
               onChange={(e) => setFechaFin(e.target.value)}

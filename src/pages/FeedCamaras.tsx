@@ -729,7 +729,7 @@ const FeedCamaras: React.FC = () => {
                         )
                       ) : (
                         <div style={{display:'flex', justifyContent:'center'}}>
-                          <img src="/fondo_camara.png" style={{width:'85%', borderRadius: '12px'}}></img>
+                          <img src="/fondo_camara.png" alt="Fondo cámara" style={{width:'85%', borderRadius: '12px'}}></img>
 
                         </div>
                       )}

@@ -183,8 +183,8 @@ const searchRecordings = async (page = 1) => {
 
       <section className="filters-section">
         <div className="filter-group">
-          <label>Cámara</label>
-          <select value={selectedCamera} onChange={e => setSelectedCamera(Number(e.target.value))}>
+          <label htmlFor='camara-select'>Cámara</label>
+          <select id='camara-select' value={selectedCamera} onChange={e => setSelectedCamera(Number(e.target.value))}>
             {cameras.map(camera => (
               <option key={camera.id} value={camera.id}>{camera.nombre}</option>
             ))}
@@ -192,8 +192,9 @@ const searchRecordings = async (page = 1) => {
         </div>
 
         <div className="filter-group">
-            <label>Fecha de inicio</label>
+            <label htmlFor='fecha-inicio'>Fecha de inicio</label>
             <input
+                id='fecha-inicio'
                 type="date"
                 value={startDate.split('T')[0]} // solo la parte de la fecha
                 onChange={(e) => setStartDate(`${e.target.value}T00:00`)}
@@ -201,8 +202,8 @@ const searchRecordings = async (page = 1) => {
         </div>
 
         <div className="filter-group">
-          <label>Rango horario</label>
-          <select value={selectedTimeRange} onChange={(e) => setSelectedTimeRange(e.target.value)}>
+          <label htmlFor='rango-horario'>Rango horario</label>
+          <select id='rango-horario' value={selectedTimeRange} onChange={(e) => setSelectedTimeRange(e.target.value)}>
             <option value="">Seleccionar rango</option>
             <option value="mañana">Mañana (6am-12pm)</option>
             <option value="tarde">Tarde (12pm-6pm)</option>
