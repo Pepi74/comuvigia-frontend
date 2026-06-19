@@ -95,7 +95,9 @@ sonar-scanner \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:9010 \
   -Dsonar.token=TU_TOKEN \
-  -Dsonar.exclusions=node_modules/**,coverage/**,dist/**,build/**
+  -Dsonar.exclusions=node_modules/**,coverage/**,dist/**,build/**,**/*.test.tsx,**/*.test.ts,tests/**,**/*.test.js \
+  -Dsonar.coverage.exclusions=**/*.test.tsx,**/*.test.ts,tests/** \
+  -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
 ```
 
 > Reemplazar `TU_TOKEN` con el token generado en SonarQube para el proyecto `comuvigia-frontend`.
