@@ -80,6 +80,28 @@ Los archivos corresponden a los siguientes casos:
 
 Las capturas de pantalla generadas por cada caso quedan en `tests/e2e/screenshots/`.
 
+## Pruebas unitarias (Vitest)
+
+### Requisitos
+- Node.js 18+
+
+### Ejecución
+
+Ejecutar todos los tests:
+```bash
+npm test
+```
+
+Con reporte de cobertura (genera `coverage/lcov-report/index.html`):
+```bash
+npx vitest run --coverage
+```
+
+Los archivos de prueba se encuentran junto a cada componente bajo `src/`, con extensión `.test.tsx` o `.test.ts`.
+
+### Cobertura actual
+448 casos de prueba cubriendo los componentes principales del frontend, con una cobertura global de ~79%.
+
 ## Análisis de calidad de código (SonarQube)
 
 ### Requisitos
